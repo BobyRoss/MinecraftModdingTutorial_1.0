@@ -1,6 +1,7 @@
 package net.machitsu.tutorialmod.item;
 
 import net.machitsu.tutorialmod.TutorialMod;
+import net.machitsu.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,9 +17,12 @@ public class ModItems {
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite", ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BOKUKUN = ITEMS.register("bokukun", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel", () -> new ChiselItem(new Item.Properties().durability(32)));
+
 
     //eventbus is a object holding event listeners and parameters for them
     public static void register(IEventBus eventBus){
+
         ITEMS.register(eventBus);
     }
 

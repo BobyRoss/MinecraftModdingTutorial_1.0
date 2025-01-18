@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "tutorialmod:bokukun"
+    }
+  },
+  "pattern": [
+    "   ",
+    " i ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:migi_block"
+  }
+}

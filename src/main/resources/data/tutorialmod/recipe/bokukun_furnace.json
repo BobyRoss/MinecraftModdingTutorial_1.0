@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 200.0,
+  "group": "alexandrite",
+  "ingredient": {
+    "item": "tutorialmod:migi_block"
+  },
+  "result": {
+    "id": "tutorialmod:bokukun"
+  }
+}

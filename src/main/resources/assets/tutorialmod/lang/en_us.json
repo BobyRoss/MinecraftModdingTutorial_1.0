@@ -1,4 +1,15 @@
 {
   "item.tutorialmod.alexandrite": "Alexandrite",
-  "item.tutorialmod.bokukun": "Boku Kun"
+  "item.tutorialmod.bokukun": "Boku Kun",
+
+  "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
+  "block.tutorialmod.migi_block": "Block of Migi",
+
+  "creativetab.tutorialmod.mymod_items": "My Mod Items",
+  "creativetab.tutorialmod.mymod_blocks": "My Mod Blocks",
+
+  "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
+  "block.tutorialmod.edamame_ore": "Edamame Ore",
+
+  "item.tutorialmod.chisel": "Chisel"
 }
