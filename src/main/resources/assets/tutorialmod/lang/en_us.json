@@ -11,5 +11,7 @@
   "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
   "block.tutorialmod.edamame_ore": "Edamame Ore",
 
-  "item.tutorialmod.chisel": "Chisel"
+  "item.tutorialmod.chisel": "Chisel",
+
+  "block.tutorialmod.magic_block": "Magic Block"
 }

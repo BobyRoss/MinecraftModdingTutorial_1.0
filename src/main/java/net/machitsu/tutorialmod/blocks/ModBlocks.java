@@ -1,6 +1,7 @@
 package net.machitsu.tutorialmod.blocks;
 
 import net.machitsu.tutorialmod.TutorialMod;
+import net.machitsu.tutorialmod.blocks.custon.MagicBlock;
 import net.machitsu.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -36,6 +37,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> EDAMAME_ORE = registerBlock("edamame_ore",
             ()-> new DropExperienceBlock(UniformInt.of(3, 6),BlockBehaviour.Properties.of()
                     .strength(1f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            ()-> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -20,7 +20,7 @@ public class ModItems {
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel", () -> new ChiselItem(new Item.Properties().durability(32)));
 
 
-    //eventbus is a object holding event listeners and parameters for them
+    //eventbus is an object holding event listeners and parameters for them
     public static void register(IEventBus eventBus){
 
         ITEMS.register(eventBus);
