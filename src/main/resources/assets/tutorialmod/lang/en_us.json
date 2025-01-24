@@ -13,5 +13,14 @@
 
   "item.tutorialmod.chisel": "Chisel",
 
-  "block.tutorialmod.magic_block": "Magic Block"
+  "block.tutorialmod.magic_block": "Magic Block",
+
+  "item.tutorialmod.sushi": "Sushi",
+
+  "item.tutorialmod.karushifah": "Karushifah",
+
+  "tooltip.tutorialmod.magic_block.tooltop": "This block will give you diamonds for §9boku kun§r",
+  "tooltip.tutorialmod.chisel.shift_down": "This Item Changes Certain Blocks",
+  "tooltip.tutorialmod.chisel": "press Shift for more §7information§r",
+  "tooltips.tutorialmod.sushi": "HeiIrassyai!"
 }

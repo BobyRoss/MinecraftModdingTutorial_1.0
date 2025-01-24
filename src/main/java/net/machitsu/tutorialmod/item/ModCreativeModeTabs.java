@@ -24,6 +24,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.CHISEL.get());
 
+                        output.accept(ModItems.SUSHI.get());
+
+                        output.accept(ModItems.KARUSHIFAH.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MYMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mymod_blocks_tab",
