@@ -1,6 +1,7 @@
 package net.machitsu.tutorialmod.item.custom;
 
 import net.machitsu.tutorialmod.blocks.ModBlocks;
+import net.machitsu.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.sounds.SoundEngine;
 import net.minecraft.network.chat.Component;
@@ -48,6 +49,8 @@ public class ChiselItem extends Item {
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+
+                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }
         }
 
@@ -60,6 +63,11 @@ public class ChiselItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel.shift_down"));
         }else{
             pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel"));
+        }
+
+        if(pStack.get(ModDataComponentTypes.COORDINATES.get()) != null){
+            pTooltipComponents.add(Component.literal("Last Block Changed at " + pStack.get(ModDataComponentTypes.COORDINATES.get())));
+
         }
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);

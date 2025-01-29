@@ -2,6 +2,7 @@ package net.machitsu.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.machitsu.tutorialmod.blocks.ModBlocks;
+import net.machitsu.tutorialmod.component.ModDataComponentTypes;
 import net.machitsu.tutorialmod.item.ModCreativeModeTabs;
 import net.machitsu.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,8 @@ public class TutorialMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
