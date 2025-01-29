@@ -36,6 +36,8 @@ public class ModItems {
     public static final RegistryObject<Item> KARUSHIFAH = ITEMS.register("karushifah", () -> new FuelItem(new Item.Properties(), 1200));
 
 
+    public static final RegistryObject<Item> ATOM = ITEMS.register("atom", ()-> new Item(new Item.Properties()));
+
     //eventbus is an object holding event listeners and parameters for them
     public static void register(IEventBus eventBus){
 

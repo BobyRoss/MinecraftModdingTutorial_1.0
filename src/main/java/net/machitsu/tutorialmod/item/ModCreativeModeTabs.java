@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.KARUSHIFAH.get());
 
+                        output.accept(ModItems.ATOM.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MYMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mymod_blocks_tab",
@@ -42,6 +44,20 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
 
                         output.accept(ModBlocks.MAGIC_BLOCK.get());
+
+                        output.accept(ModBlocks.MIGI_TRAP_DOOR.get());
+                        output.accept(ModBlocks.MIGI_BUTTON.get());
+                        output.accept(ModBlocks.MIGI_DOOR.get());
+                        output.accept(ModBlocks.MIGI_FENCE.get());
+                        output.accept(ModBlocks.MIGI_STAIR.get());
+                        output.accept(ModBlocks.MIGI_SLAB.get());
+                        output.accept(ModBlocks.MIGI_WALL.get());
+                        output.accept(ModBlocks.MIGI_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.MIGI_BUTTON.get());
+
+                        output.accept(ModBlocks.ATOM_LAMP_BLOCK.get());
+
+
 
                     }).build());
 

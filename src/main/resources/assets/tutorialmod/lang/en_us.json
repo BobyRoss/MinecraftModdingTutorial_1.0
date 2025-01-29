@@ -22,5 +22,23 @@
   "tooltip.tutorialmod.magic_block.tooltop": "This block will give you diamonds for §9boku kun§r",
   "tooltip.tutorialmod.chisel.shift_down": "This Item Changes Certain Blocks",
   "tooltip.tutorialmod.chisel": "press Shift for more §7information§r",
-  "tooltips.tutorialmod.sushi": "HeiIrassyai!"
+  "tooltips.tutorialmod.sushi": "HeiIrassyai!",
+
+  "item.tutorialmod.atom": "Atom",
+
+  "block.tutorialmod.migi_stairs": "Migi stair",
+  "block.tutorialmod.migi_slab": "Migi slab",
+
+  "block.tutorialmod.migi_button": "Migi Button",
+  "block.tutorialmod.migi_pressure_plate": "Migi Pressure Plate",
+
+  "block.tutorialmod.migi_fence": "Migi Fence",
+  "block.tutorialmod.migi_fence_gate": "Migi Fence Gate",
+  "block.tutorialmod.migi_wall": "Migi Wall",
+
+  "block.tutorialmod.migi_door": "Migi Door",
+  "block.tutorialmod.migi_trapdoor": "Migi Trap Door",
+
+
+  "block.tutorialmod.atom_lamp_block": "Atom Lamp"
 }
