@@ -6,6 +6,7 @@ import net.machitsu.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -29,6 +30,15 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .pattern("AAA")
                 .define('A', ModItems.ALEXANDRITE.get())
                 .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has (ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        //build sword
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ATOM_SWORD.get())
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .define('A', ModItems.ATOM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.ATOM.get()), has (ModItems.ATOM.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)

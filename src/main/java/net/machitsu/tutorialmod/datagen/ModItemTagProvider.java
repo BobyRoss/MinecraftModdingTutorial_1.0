@@ -6,6 +6,7 @@ import net.machitsu.tutorialmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -24,5 +25,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
             .add(ModItems.ALEXANDRITE.get())
             .add(ModItems.SUSHI.get())
             .add(Items.COAL);
+
+    tag(ItemTags.TRIMMABLE_ARMOR)
+            .add(ModItems.ATOM_HELMET.getKey())
+            .add(ModItems.ATOM_CHESTPLATE.getKey())
+            .add(ModItems.ATOM_LEGGINGS.getKey())
+            .add(ModItems.ATOM_BOOTS.getKey());
+
     }
 }

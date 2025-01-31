@@ -9,8 +9,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import org.openjdk.nashorn.internal.runtime.regexp.joni.ast.StringNode;
 
+import javax.swing.text.html.HTML;
+
 public class ModTags {
     public static class Blocks{
+        public static TagKey<Block> NEEDS_ATOM_TOOL = createTag("needs_atom_tool");
+        public static TagKey<Block> INCORRECT_FOR_ATOM_TOOL = createTag("incorrect_for_atom_tool");
+
+
 
         private static TagKey<Block> createTag(String name){
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name));

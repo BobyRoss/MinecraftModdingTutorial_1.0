@@ -68,7 +68,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> ATOM_LAMP_BLOCK = registerBlock("atom_lamp_block",
-    () -> new AtomLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state->state.getValue(AtomLampBlock.CLICKED)?15:0)));
+    () -> new AtomLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state->state.getValue(AtomLampBlock.CLICKED)?15:0 )));
 
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

@@ -40,5 +40,21 @@
   "block.tutorialmod.migi_trapdoor": "Migi Trap Door",
 
 
-  "block.tutorialmod.atom_lamp_block": "Atom Lamp"
+  "block.tutorialmod.atom_lamp_block": "Atom Lamp",
+
+  "item.tutorialmod.atom_sword": "Atom Sword",
+  "item.tutorialmod.atom_axe": "Atom Axe",
+  "item.tutorialmod.atom_pickaxe": "Atom Pickaxe",
+  "item.tutorialmod.atom_shovel": "Atom Shovel",
+  "item.tutorialmod.atom_hoe": "Atom Hoe",
+
+  "item.tutorialmod.atom_hammer": "Atom Hammer",
+
+  "item.tutorialmod.atom_helmet": "Atom Helmet",
+  "item.tutorialmod.atom_leggings": "Atom Leggings",
+  "item.tutorialmod.atom_chestplate": "Atom Chestplate",
+  "item.tutorialmod.atom_boots": "Atom Boots",
+
+  "item.tutorialmod.atom_horse_armor": "Atom Horse Armor"
+
 }

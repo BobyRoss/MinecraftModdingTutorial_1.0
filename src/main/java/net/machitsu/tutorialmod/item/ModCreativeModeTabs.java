@@ -57,6 +57,20 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ATOM_LAMP_BLOCK.get());
 
+                        output.accept(ModItems.ATOM_SWORD.get());
+                        output.accept(ModItems.ATOM_PICKAXE.get());
+                        output.accept(ModItems.ATOM_SHOVEL.get());
+                        output.accept(ModItems.ATOM_HOE.get());
+                        output.accept(ModItems.ATOM_AXE.get());
+
+                        output.accept(ModItems.ATOM_HAMMER.get());
+
+                        output.accept(ModItems.ATOM_HELMET.get());
+                        output.accept(ModItems.ATOM_LEGGINGS.get());
+                        output.accept(ModItems.ATOM_CHESTPLATE.get());
+                        output.accept(ModItems.ATOM_BOOTS.get());
+
+                        output.accept(ModItems.ATOM_HORSE_ARMOR.get());
 
 
                     }).build());
