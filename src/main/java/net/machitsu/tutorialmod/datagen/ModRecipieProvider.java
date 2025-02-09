@@ -6,9 +6,12 @@ import net.machitsu.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -74,6 +77,9 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy(getHasName(ModItems.ATOM.get()), has(ModItems.ATOM.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.MIGI_TRAP_DOOR.get(), Ingredient.of(ModItems.ATOM.get())).group("migi")
                 .unlockedBy(getHasName(ModItems.ATOM.get()), has(ModItems.ATOM.get())).save(pRecipeOutput);
+
+
+        trimSmithing(pRecipeOutput, ModItems.MACHI_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "machi"));
 
     }
 }

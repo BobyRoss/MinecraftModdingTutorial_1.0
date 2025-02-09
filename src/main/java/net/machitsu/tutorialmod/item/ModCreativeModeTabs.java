@@ -30,6 +30,28 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.ATOM.get());
 
+                        output.accept(ModItems.ATOM_SWORD.get());
+                        output.accept(ModItems.ATOM_PICKAXE.get());
+                        output.accept(ModItems.ATOM_SHOVEL.get());
+                        output.accept(ModItems.ATOM_HOE.get());
+                        output.accept(ModItems.ATOM_AXE.get());
+
+                        output.accept(ModItems.ATOM_HAMMER.get());
+
+                        output.accept(ModItems.ATOM_HELMET.get());
+                        output.accept(ModItems.ATOM_LEGGINGS.get());
+                        output.accept(ModItems.ATOM_CHESTPLATE.get());
+                        output.accept(ModItems.ATOM_BOOTS.get());
+
+                        output.accept(ModItems.ATOM_HORSE_ARMOR.get());
+
+                        output.accept(ModItems.MACHI_SMITHING_TEMPLATE.get());
+
+                        output.accept(ModItems.SAIKYOU_BOW.get());
+                        output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
+                        output.accept(ModItems.CHARLES_MUSIC_DISC.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MYMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mymod_blocks_tab",
@@ -57,20 +79,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ATOM_LAMP_BLOCK.get());
 
-                        output.accept(ModItems.ATOM_SWORD.get());
-                        output.accept(ModItems.ATOM_PICKAXE.get());
-                        output.accept(ModItems.ATOM_SHOVEL.get());
-                        output.accept(ModItems.ATOM_HOE.get());
-                        output.accept(ModItems.ATOM_AXE.get());
 
-                        output.accept(ModItems.ATOM_HAMMER.get());
-
-                        output.accept(ModItems.ATOM_HELMET.get());
-                        output.accept(ModItems.ATOM_LEGGINGS.get());
-                        output.accept(ModItems.ATOM_CHESTPLATE.get());
-                        output.accept(ModItems.ATOM_BOOTS.get());
-
-                        output.accept(ModItems.ATOM_HORSE_ARMOR.get());
 
 
                     }).build());

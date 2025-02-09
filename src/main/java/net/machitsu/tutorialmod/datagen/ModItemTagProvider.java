@@ -27,10 +27,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
             .add(Items.COAL);
 
     tag(ItemTags.TRIMMABLE_ARMOR)
-            .add(ModItems.ATOM_HELMET.getKey())
-            .add(ModItems.ATOM_CHESTPLATE.getKey())
-            .add(ModItems.ATOM_LEGGINGS.getKey())
-            .add(ModItems.ATOM_BOOTS.getKey());
+            .add(ModItems.ATOM_HELMET.get())
+            .add(ModItems.ATOM_CHESTPLATE.get())
+            .add(ModItems.ATOM_LEGGINGS.get())
+            .add(ModItems.ATOM_BOOTS.get());
 
+    tag(ItemTags.TRIM_MATERIALS)
+            .add(ModItems.ATOM.get());
+
+    tag(ItemTags.TRIM_TEMPLATES)
+            .add(ModItems.MACHI_SMITHING_TEMPLATE.get());
     }
 }

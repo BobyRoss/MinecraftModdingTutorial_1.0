@@ -4,6 +4,7 @@ import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.custon.AtomLampBlock;
 import net.machitsu.tutorialmod.blocks.custon.MagicBlock;
 import net.machitsu.tutorialmod.item.ModItems;
+import net.machitsu.tutorialmod.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -40,7 +41,7 @@ public class ModBlocks {
                     .strength(1f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
-            ()-> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+            ()-> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<StairBlock> MIGI_STAIR  = registerBlock("migi_stairs",
             ()-> new StairBlock(ModBlocks.MIGI_BLOCK.get().defaultBlockState().getBlock().defaultBlockState(),

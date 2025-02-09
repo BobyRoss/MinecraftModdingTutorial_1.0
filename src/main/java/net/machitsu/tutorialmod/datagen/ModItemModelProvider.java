@@ -46,9 +46,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BOKUKUN.get());
         basicItem(ModItems.KARUSHIFAH.get());
         basicItem(ModItems.SUSHI.get());
-        basicItem(ModItems.CHISEL.get());
+        //basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.ATOM.get());
         basicItem(ModItems.ATOM_HORSE_ARMOR.get());
+        basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+        basicItem(ModItems.CHARLES_MUSIC_DISC.get());
+
+        basicItem(ModItems.MACHI_SMITHING_TEMPLATE.get());
 
         buttonItem(ModBlocks.MIGI_BUTTON, ModBlocks.MIGI_BLOCK);
         fenceItem(ModBlocks.MIGI_FENCE, ModBlocks.MIGI_BLOCK);

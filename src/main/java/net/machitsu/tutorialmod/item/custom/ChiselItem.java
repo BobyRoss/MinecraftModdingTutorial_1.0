@@ -2,6 +2,7 @@ package net.machitsu.tutorialmod.item.custom;
 
 import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.component.ModDataComponentTypes;
+import net.machitsu.tutorialmod.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.sounds.SoundEngine;
 import net.minecraft.network.chat.Component;
@@ -48,7 +49,7 @@ public class ChiselItem extends Item {
                 pContext.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) pContext.getPlayer()),
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-                level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                level.playSound(null, pContext.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
 
                 pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }

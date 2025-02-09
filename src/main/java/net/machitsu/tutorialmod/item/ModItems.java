@@ -5,7 +5,9 @@ import net.machitsu.tutorialmod.item.custom.ChiselItem;
 import net.machitsu.tutorialmod.item.custom.FuelItem;
 import net.machitsu.tutorialmod.item.custom.HammerItem;
 import net.machitsu.tutorialmod.item.custom.ModArmorItem;
+import net.machitsu.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,6 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
+
+import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -81,6 +85,18 @@ public class ModItems {
     public static final RegistryObject<Item> ATOM_HORSE_ARMOR = ITEMS.register("atom_horse_armor",
     ()-> new AnimalArmorItem(ModArmorMaterials.ATOM_ARMOR_MATERIAl, AnimalArmorItem.BodyType.EQUESTRIAN,
                              false, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> MACHI_SMITHING_TEMPLATE = ITEMS.register("machi_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "machi")));
+
+    public static final RegistryObject<Item> SAIKYOU_BOW = ITEMS.register("saikyou_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
+
+    public static final RegistryObject<Item> CHARLES_MUSIC_DISC = ITEMS.register("charles_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.CHARLES_KEY).stacksTo(1)));
 
 
     //eventbus is an object holding event listeners and parameters for them

@@ -55,6 +55,32 @@
   "item.tutorialmod.atom_chestplate": "Atom Chestplate",
   "item.tutorialmod.atom_boots": "Atom Boots",
 
-  "item.tutorialmod.atom_horse_armor": "Atom Horse Armor"
+  "item.tutorialmod.atom_horse_armor": "Atom Horse Armor",
+  "item.tutorialmod.machi_armor_trim_smithing_template": "Machitsu Trim Template",
 
+  "trim_pattern.tutorialmod.machi": "Machitsu Armor Trim",
+
+  "trim_material.tutorialmod.atom": "Atom Material",
+  "trim_material.tutorialmod.atom.desc": "Atom DESUYO!",
+
+  "item.tutorialmod.saikyou_bow": "SAIKYOU NA YUMI DESUYO!",
+
+  "item.tutorialmod.bar_brawl_music_disc" : "Bar Brawl",
+  "item.tutorialmod.bar_brawl_music_disc.desc" : "Bryan Tech - Bar Brawl",
+
+  "item.tutorialmod.charles_music_disc" : "syaruru",
+  "item.tutorialmod.charles_music_disc.desc" : "baloon",
+
+  "effect.tutorialmod.slimey": "slimey",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey LingeringPotion",
+
+  "painting.tutorialmod.saw_them.title": "Saw Them",
+  "painting.tutorialmod.saw_them.author": "NanoAttack",
+  "painting.tutorialmod.jesus.title": "Jesus",
+  "painting.tutorialmod.jesus.author": "Machitsu",
+  "painting.tutorialmod.japan.title": "Japan",
+  "painting.tutorialmod.japan.author": "Machitsu"
 }
