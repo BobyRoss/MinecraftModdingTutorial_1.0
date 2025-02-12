@@ -2,6 +2,7 @@ package net.machitsu.tutorialmod.blocks;
 
 import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.custon.AtomLampBlock;
+import net.machitsu.tutorialmod.blocks.custon.BushCampBush;
 import net.machitsu.tutorialmod.blocks.custon.MagicBlock;
 import net.machitsu.tutorialmod.blocks.custon.SushiCropBlock;
 import net.machitsu.tutorialmod.item.ModItems;
@@ -74,6 +75,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SUSHI_CROP = BLOCKS.register("sushi_crop",
             ()-> new SushiCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> BUSH_CAMP_BUSH = BLOCKS.register("bush_camp_bush",
+            () -> new BushCampBush(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

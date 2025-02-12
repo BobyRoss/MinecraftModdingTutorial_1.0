@@ -3,11 +3,13 @@ package net.machitsu.tutorialmod.datagen;
 import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.blocks.custon.AtomLampBlock;
+import net.machitsu.tutorialmod.blocks.custon.BushCampBush;
 import net.machitsu.tutorialmod.blocks.custon.SushiCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -16,7 +18,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Objects;
 import java.util.function.Function;
 
 import static net.machitsu.tutorialmod.blocks.ModBlocks.ATOM_LAMP_BLOCK;
@@ -57,6 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customLamp();
 
     makeCrop(((CropBlock) ModBlocks.SUSHI_CROP.get()), "sushi_crop_stage", "sushi_crop_stage");
+    makeBush(((SweetBerryBushBlock) ModBlocks.BUSH_CAMP_BUSH.get()), "bush_camp_bush_stage", "bush_camp_bush_stage");
 
     }
 
@@ -73,6 +75,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         return models;
     }
+
+
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BushCampBush.AGE),
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(BushCampBush.AGE))).renderType("cutout"));
+
+        return models;
+    }
+
+
+
 
     private void customLamp() {
         getVariantBuilder(ATOM_LAMP_BLOCK.get()).forAllStates(state -> {

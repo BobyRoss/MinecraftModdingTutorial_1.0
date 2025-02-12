@@ -102,6 +102,9 @@ public class ModItems {
     public static final RegistryObject<Item> SUSHI_SEEDS = ITEMS.register("sushi_seeds",
             () -> new ItemNameBlockItem(ModBlocks.SUSHI_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> BUSH_CAMP = ITEMS.register("bush_camp",
+            () -> new ItemNameBlockItem(ModBlocks.BUSH_CAMP_BUSH.get(), new Item.Properties().food(ModFoodProperties.BUSH_CAMP)));
+
 
     //eventbus is an object holding event listeners and parameters for them
     public static void register(IEventBus eventBus){

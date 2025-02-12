@@ -52,6 +52,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
         basicItem(ModItems.CHARLES_MUSIC_DISC.get());
 
+        basicItem(ModItems.BUSH_CAMP.get());
+
         basicItem(ModItems.SUSHI_SEEDS.get());
 
         basicItem(ModItems.MACHI_SMITHING_TEMPLATE.get());

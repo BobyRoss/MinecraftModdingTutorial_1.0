@@ -54,6 +54,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SUSHI_SEEDS.get());
 
+                        output.accept(ModItems.BUSH_CAMP.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MYMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mymod_blocks_tab",

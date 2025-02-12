@@ -87,5 +87,8 @@
   "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
 
   "item.tutorialmod.sushi_seeds": "Sushi seeds",
-  "block.tutorialmod.sushi_crop": "Sushi Crop"
+  "block.tutorialmod.sushi_crop": "Sushi Crop",
+
+  "block.tutorialmod.bush_camp_bush": "Bush Camp Bush",
+  "item.tutorialmod.bush_camp": "George W Bush"
 }
