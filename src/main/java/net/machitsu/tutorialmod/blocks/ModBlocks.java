@@ -3,6 +3,7 @@ package net.machitsu.tutorialmod.blocks;
 import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.custon.AtomLampBlock;
 import net.machitsu.tutorialmod.blocks.custon.MagicBlock;
+import net.machitsu.tutorialmod.blocks.custon.SushiCropBlock;
 import net.machitsu.tutorialmod.item.ModItems;
 import net.machitsu.tutorialmod.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -70,6 +71,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ATOM_LAMP_BLOCK = registerBlock("atom_lamp_block",
     () -> new AtomLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state->state.getValue(AtomLampBlock.CLICKED)?15:0 )));
+
+    public static final RegistryObject<Block> SUSHI_CROP = BLOCKS.register("sushi_crop",
+            ()-> new SushiCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

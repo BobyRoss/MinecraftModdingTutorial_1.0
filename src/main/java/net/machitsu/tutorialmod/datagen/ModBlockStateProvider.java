@@ -3,9 +3,12 @@ package net.machitsu.tutorialmod.datagen;
 import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.blocks.custon.AtomLampBlock;
+import net.machitsu.tutorialmod.blocks.custon.SushiCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -14,6 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
+import java.util.function.Function;
 
 import static net.machitsu.tutorialmod.blocks.ModBlocks.ATOM_LAMP_BLOCK;
 
@@ -52,6 +56,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customLamp();
 
+    makeCrop(((CropBlock) ModBlocks.SUSHI_CROP.get()), "sushi_crop_stage", "sushi_crop_stage");
+
+    }
+
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SushiCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(((SushiCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void customLamp() {

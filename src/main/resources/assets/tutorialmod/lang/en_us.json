@@ -82,5 +82,10 @@
   "painting.tutorialmod.jesus.title": "Jesus",
   "painting.tutorialmod.jesus.author": "Machitsu",
   "painting.tutorialmod.japan.title": "Japan",
-  "painting.tutorialmod.japan.author": "Machitsu"
+  "painting.tutorialmod.japan.author": "Machitsu",
+
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
+
+  "item.tutorialmod.sushi_seeds": "Sushi seeds",
+  "block.tutorialmod.sushi_crop": "Sushi Crop"
 }

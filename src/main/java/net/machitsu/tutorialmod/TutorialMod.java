@@ -4,12 +4,14 @@ import com.mojang.logging.LogUtils;
 import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.component.ModDataComponentTypes;
 import net.machitsu.tutorialmod.effect.ModEffects;
+import net.machitsu.tutorialmod.enchantment.ModEnchantmentEffects;
 import net.machitsu.tutorialmod.item.ModCreativeModeTabs;
 import net.machitsu.tutorialmod.item.ModItems;
 import net.machitsu.tutorialmod.potion.ModPotions;
 import net.machitsu.tutorialmod.sound.ModSounds;
 import net.machitsu.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -56,6 +58,8 @@ public class TutorialMod {
 
         ModPotions.register(modEventBus);
 
+        ModEnchantmentEffects.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -65,7 +69,10 @@ public class TutorialMod {
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(()->{
+            ComposterBlock.COMPOSTABLES.put(ModItems.SUSHI.get(), 2f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SUSHI_SEEDS.get(), 0.4f);
+        });
     }
 
     // Add the example block item to the building blocks tab

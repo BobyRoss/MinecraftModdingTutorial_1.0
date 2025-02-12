@@ -1,6 +1,7 @@
 package net.machitsu.tutorialmod.item;
 
 import net.machitsu.tutorialmod.TutorialMod;
+import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.item.custom.ChiselItem;
 import net.machitsu.tutorialmod.item.custom.FuelItem;
 import net.machitsu.tutorialmod.item.custom.HammerItem;
@@ -97,6 +98,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHARLES_MUSIC_DISC = ITEMS.register("charles_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.CHARLES_KEY).stacksTo(1)));
+
+    public static final RegistryObject<Item> SUSHI_SEEDS = ITEMS.register("sushi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SUSHI_CROP.get(), new Item.Properties()));
 
 
     //eventbus is an object holding event listeners and parameters for them
