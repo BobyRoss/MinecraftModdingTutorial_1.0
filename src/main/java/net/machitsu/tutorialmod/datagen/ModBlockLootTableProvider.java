@@ -40,6 +40,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.EDAMAME_ORE.get());
 
         this.add(ModBlocks.ALEXANDRITE_ORE.get(), block->createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.ALEXANDRITE.get()));
+        this.add(ModBlocks.ALEXANDRITE_NETHER_ORE.get(), block->createOreDrop(ModBlocks.ALEXANDRITE_NETHER_ORE.get(), ModItems.ALEXANDRITE.get()));
+        this.add(ModBlocks.ALEXANDRITE_END_ORE.get(), block->createMultipleOreDrops(ModBlocks.ALEXANDRITE_END_ORE.get(), ModItems.ALEXANDRITE.get(), 1, 6));
+
         this.add(ModBlocks.MIGI_BLOCK.get(), block -> createMultipleOreDrops(ModBlocks.MIGI_BLOCK.get(), ModItems.BOKUKUN.get(), 1.0f, 100.0f));
 
         dropSelf(ModBlocks.MIGI_BUTTON.get());

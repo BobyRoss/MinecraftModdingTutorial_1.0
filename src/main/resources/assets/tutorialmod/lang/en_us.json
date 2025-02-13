@@ -9,6 +9,9 @@
   "creativetab.tutorialmod.mymod_blocks": "My Mod Blocks",
 
   "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
+  "block.tutorialmod.alexandrite_end_ore": "Alexandrite End Ore",
+  "block.tutorialmod.alexandrite_nether_ore": "Alexandrite Nether Ore",
+
   "block.tutorialmod.edamame_ore": "Edamame Ore",
 
   "item.tutorialmod.chisel": "Chisel",

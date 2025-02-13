@@ -55,6 +55,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MIGI_FENCE_GATE);
         blockItem(ModBlocks.MIGI_TRAP_DOOR, "_bottom");
 
+        blockWithItem(ModBlocks.ALEXANDRITE_END_ORE);
+        blockWithItem(ModBlocks.ALEXANDRITE_NETHER_ORE);
+
         customLamp();
 
     makeCrop(((CropBlock) ModBlocks.SUSHI_CROP.get()), "sushi_crop_stage", "sushi_crop_stage");

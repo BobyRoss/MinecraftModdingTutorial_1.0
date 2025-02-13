@@ -37,6 +37,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
             ()-> new DropExperienceBlock(UniformInt.of(2, 4),BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ALEXANDRITE_END_ORE = registerBlock("alexandrite_end_ore",
+            ()-> new DropExperienceBlock(UniformInt.of(2, 4),BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ALEXANDRITE_NETHER_ORE = registerBlock("alexandrite_nether_ore",
+            ()-> new DropExperienceBlock(UniformInt.of(2, 4),BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> EDAMAME_ORE = registerBlock("edamame_ore",
             ()-> new DropExperienceBlock(UniformInt.of(3, 6),BlockBehaviour.Properties.of()
