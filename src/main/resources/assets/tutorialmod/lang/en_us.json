@@ -93,5 +93,22 @@
   "block.tutorialmod.sushi_crop": "Sushi Crop",
 
   "block.tutorialmod.bush_camp_bush": "Bush Camp Bush",
-  "item.tutorialmod.bush_camp": "George W Bush"
+  "item.tutorialmod.bush_camp": "George W Bush",
+
+  "block.tutorialmod.madagascar_log": "Madagascar Log",
+  "block.tutorialmod.madagascar_planks": "Madagascar Planks",
+  "block.tutorialmod.madagascar_wood": "Madagascar Wood",
+  "block.tutorialmod.stripped_madagascar_log": "Stripped Madagascar Log",
+  "block.tutorialmod.stripped_madagascar_wood": "Stripped Madagascar Wood",
+  "block.tutorialmod.madagascar_leaves": "Madagascar Leaves",
+  "block.tutorialmod.madagascar_sapling": "Madagascar Sapling",
+
+  "item.tutorialmod.triceratops_spawn_egg": "Triceratops Spawn Egg",
+  "entity.tutorialmod.triceratops": "Triceratops",
+
+  "item.tutorialmod.tomahawk": "Tomahawk",
+
+  "block.tutorialmod.chair": "Chair",
+
+  "item.tutorialmod.radiation_staff": "Radiation Staff"
 }

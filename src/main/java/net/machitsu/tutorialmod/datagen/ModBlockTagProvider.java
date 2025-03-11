@@ -48,5 +48,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .remove(ModTags.Blocks.NEEDS_ATOM_TOOL);
 
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MADAGASCAR_LOG.get())
+                .add(ModBlocks.MADAGASCAR_WOOD.get())
+                .add(ModBlocks.STRIPPED_MADAGASCAR_LOG.get())
+                .add(ModBlocks.STRIPPED_MADAGASCAR_WOOD.get());
     }
 }

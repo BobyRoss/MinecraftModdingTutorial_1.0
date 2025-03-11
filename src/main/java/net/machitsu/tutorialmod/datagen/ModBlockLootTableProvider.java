@@ -28,6 +28,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
+
+
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected ModBlockLootTableProvider(HolderLookup.Provider pRegistries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
@@ -36,6 +38,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.CHAIR.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.EDAMAME_ORE.get());
 
@@ -81,6 +84,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
+
+        this.dropSelf(ModBlocks.MADAGASCAR_WOOD.get());
+        this.dropSelf(ModBlocks.MADAGASCAR_PLANKS.get());
+        this.dropSelf(ModBlocks.MADAGASCAR_SAPLING.get());
+        this.dropSelf(ModBlocks.MADAGASCAR_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MADAGASCAR_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MADAGASCAR_LOG.get());
+
+        this.add(ModBlocks.MADAGASCAR_LEAVES.get(), block->
+        createLeavesDrops(block, ModBlocks.MADAGASCAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

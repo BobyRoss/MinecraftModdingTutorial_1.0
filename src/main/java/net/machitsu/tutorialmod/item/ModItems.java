@@ -2,14 +2,13 @@ package net.machitsu.tutorialmod.item;
 
 import net.machitsu.tutorialmod.TutorialMod;
 import net.machitsu.tutorialmod.blocks.ModBlocks;
-import net.machitsu.tutorialmod.item.custom.ChiselItem;
-import net.machitsu.tutorialmod.item.custom.FuelItem;
-import net.machitsu.tutorialmod.item.custom.HammerItem;
-import net.machitsu.tutorialmod.item.custom.ModArmorItem;
+import net.machitsu.tutorialmod.entity.ModEntities;
+import net.machitsu.tutorialmod.item.custom.*;
 import net.machitsu.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -104,6 +103,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> BUSH_CAMP = ITEMS.register("bush_camp",
             () -> new ItemNameBlockItem(ModBlocks.BUSH_CAMP_BUSH.get(), new Item.Properties().food(ModFoodProperties.BUSH_CAMP)));
+
+    public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
+
+    public static final RegistryObject<Item> TOMAHAWK = ITEMS.register("tomahawk",
+            () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> RADIATION_STAFF = ITEMS.register("radiation_staff",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
 
     //eventbus is an object holding event listeners and parameters for them

@@ -56,6 +56,14 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.BUSH_CAMP.get());
 
+                        output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+
+                        output.accept(ModItems.TOMAHAWK.get());
+
+                        output.accept(ModItems.RADIATION_STAFF.get());
+
+
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MYMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mymod_blocks_tab",
@@ -83,6 +91,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ATOM_LAMP_BLOCK.get());
 
+                        output.accept(ModBlocks.MADAGASCAR_SAPLING.get());
+
+                        output.accept(ModBlocks.CHAIR.get());
 
 
 

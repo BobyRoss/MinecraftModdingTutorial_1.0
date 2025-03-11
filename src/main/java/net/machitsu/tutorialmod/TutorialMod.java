@@ -5,11 +5,17 @@ import net.machitsu.tutorialmod.blocks.ModBlocks;
 import net.machitsu.tutorialmod.component.ModDataComponentTypes;
 import net.machitsu.tutorialmod.effect.ModEffects;
 import net.machitsu.tutorialmod.enchantment.ModEnchantmentEffects;
+import net.machitsu.tutorialmod.entity.ModEntities;
+import net.machitsu.tutorialmod.entity.client.ChairRenderer;
+import net.machitsu.tutorialmod.entity.client.TomahawkProjectileRenderer;
+import net.machitsu.tutorialmod.entity.client.TriceratopsRenderer;
 import net.machitsu.tutorialmod.item.ModCreativeModeTabs;
 import net.machitsu.tutorialmod.item.ModItems;
 import net.machitsu.tutorialmod.potion.ModPotions;
 import net.machitsu.tutorialmod.sound.ModSounds;
 import net.machitsu.tutorialmod.util.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -60,8 +66,12 @@ public class TutorialMod {
 
         ModEnchantmentEffects.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -103,7 +113,14 @@ public class TutorialMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
             ModItemProperties.addCustomItemProperties();
+
+
+            EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
+            EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
+            EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
         }
     }
 }

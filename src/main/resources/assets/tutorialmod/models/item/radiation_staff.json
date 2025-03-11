@@ -1,0 +1,6 @@
+{
+  "parent": "minectaft:item/handheld",
+  "textures": {
+    "layer0": "tutorialmod:item/radiation_staff"
+  }
+}

@@ -60,9 +60,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customLamp();
 
-    makeCrop(((CropBlock) ModBlocks.SUSHI_CROP.get()), "sushi_crop_stage", "sushi_crop_stage");
-    makeBush(((SweetBerryBushBlock) ModBlocks.BUSH_CAMP_BUSH.get()), "bush_camp_bush_stage", "bush_camp_bush_stage");
+        makeCrop(((CropBlock) ModBlocks.SUSHI_CROP.get()), "sushi_crop_stage", "sushi_crop_stage");
+        makeBush(((SweetBerryBushBlock) ModBlocks.BUSH_CAMP_BUSH.get()), "bush_camp_bush_stage", "bush_camp_bush_stage");
 
+        logBlock(ModBlocks.MADAGASCAR_LOG.get());
+        axisBlock(ModBlocks.MADAGASCAR_WOOD.get(), blockTexture(ModBlocks.MADAGASCAR_LOG.get()), blockTexture(ModBlocks.MADAGASCAR_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_MADAGASCAR_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_MADAGASCAR_WOOD.get(), blockTexture(ModBlocks.STRIPPED_MADAGASCAR_LOG.get()), blockTexture(ModBlocks.STRIPPED_MADAGASCAR_LOG.get()));
+
+        blockItem(ModBlocks.MADAGASCAR_LOG);
+        blockItem(ModBlocks.MADAGASCAR_WOOD);
+        blockItem(ModBlocks.STRIPPED_MADAGASCAR_LOG);
+        blockItem(ModBlocks.STRIPPED_MADAGASCAR_WOOD);
+
+        blockWithItem(ModBlocks.MADAGASCAR_PLANKS);
+
+        leavesBlock(ModBlocks.MADAGASCAR_LEAVES);
+        saplingBlock(ModBlocks.MADAGASCAR_SAPLING);
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {

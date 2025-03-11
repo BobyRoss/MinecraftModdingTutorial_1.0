@@ -71,11 +71,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ATOM_SHOVEL);
         handheldItem(ModItems.ATOM_HAMMER);
 
+        //handheldItem(ModItems.TOMAHAWK);
+
         trimmedArmorItem(ModItems.ATOM_HELMET);
         trimmedArmorItem(ModItems.ATOM_CHESTPLATE);
         trimmedArmorItem(ModItems.ATOM_LEGGINGS);
         trimmedArmorItem(ModItems.ATOM_BOOTS);
+
+        saplingItem(ModBlocks.MADAGASCAR_SAPLING);
+
+        withExistingParent(ModItems.TRICERATOPS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
 
 
 
