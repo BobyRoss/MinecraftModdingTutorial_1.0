@@ -62,6 +62,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.RADIATION_STAFF.get());
 
+                        output.accept(ModItems.AKAGYOU.get());
+
 
 
                     }).build());

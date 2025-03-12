@@ -110,5 +110,7 @@
 
   "block.tutorialmod.chair": "Chair",
 
-  "item.tutorialmod.radiation_staff": "Radiation Staff"
+  "item.tutorialmod.radiation_staff": "Radiation Staff",
+
+  "item.tutorialmod.akagyou" : "A gyou & KA gyou"
 }
